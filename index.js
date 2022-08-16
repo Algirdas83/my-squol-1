@@ -37,7 +37,6 @@ app.use(session({
 const database = await mysql.createConnection({
     host: 'pauliuspetrunin.lt',
     user: 'bit',
-    port: 3406,
     password: 'kulokas',
     database: 'AlgirdasL'
 })
