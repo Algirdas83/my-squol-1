@@ -264,12 +264,14 @@ app.get('/delete/:id', (auth), async (req,res) => {
 
 app.get('/playlist', async (req, res) => {
 
+    const aprove = req.session.loggedIn
+
 
     const playlist =  await database.query('SELECT id, name, image FROM playlist')
 
 
 
-    res.render('playList', {playlist: playlist[0]})
+    res.render('playList', {playlist: playlist[0], approve:aprove })
 
 })
 

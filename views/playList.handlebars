@@ -7,9 +7,10 @@
       <th scope="col">id</th>
       <th scope="col">Grojarascio pavadinimas</th>
       <th scope="col">nuotrauka</th>
-      <th>    <a class="btn btn-warning mt-3" href="/playlists/new">Pridėti daina</a>
-      <th></th>
-</th>
+      {{#if approve }}
+      <th>    <a class="btn btn-warning mt-3" href="/playlists/new">Pridėti daina</a></th>
+      {{/if}}
+
       
     </tr>
   </thead>
@@ -20,11 +21,13 @@
       <td>{{id}}</td>
       <td> {{name}}</td>
       <td><img src="{{image}}" alt=""></td>
+      {{#if ../approve}}
       <td>
          <a class="btn  btn-danger" href="/playlists/delete/{{id}}">Ištrinti</a>
          <a class="btn btn-success" href="/playlists/edit/{{id}}">Redaguoti</a>
       
       </td>
+      {{/if}}
      
     </tr>
     {{/each}}
