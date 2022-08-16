@@ -1,3 +1,1 @@
-
-
-web:node .
+web: node .
